@@ -10,7 +10,7 @@
 
  # Table of Contents
  
- 1. [Fuchsia Learning Resources](https://github.com/mikeroyal/Fuchsia-Guide#fuchsia-learning-reosurces)
+ 1. [Fuchsia Learning Resources](https://github.com/mikeroyal/Fuchsia-Guide#fuchsia-learning-resources)
  
  2. [Fuchsia Tools and Frameworks](https://github.com/mikeroyal/Fuchsia-Guide#fuchsia-tools-and-frameworks)
  
