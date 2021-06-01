@@ -1,5 +1,5 @@
 <h1 align="center">
- <img src="">
+ <img src="https://user-images.githubusercontent.com/45159366/120383684-09eb3280-c2da-11eb-9396-95b0f5696252.png">
   <br />
   Fuchsia Guide
 </h1>
@@ -16,7 +16,7 @@
  
  3. [Flutter Development](https://github.com/mikeroyal/Fuchsia-Guide#flutter-development)
  
- 4. [C/C++ Development](https://github.com/mikeroyal/Fuchsia-Guide#c-c-development)
+ 4. [C/C++ Development](https://github.com/mikeroyal/Fuchsia-Guide#cc-development)
  
  5. [Dart Development](https://github.com/mikeroyal/Fuchsia-Guide#dart-development)
  
@@ -27,8 +27,15 @@
  8. [Python Development](https://github.com/mikeroyal/Fuchsia-Guide#python-development)
  
  
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/120383693-0bb4f600-c2da-11eb-9876-2c5dae5f7b71.png">
+  <br />
+</p>
+
+**Fuchsia OS on the Nest Hub . Source: [Google](https://store.google.com/product/nest_hub_2nd_gen?hl=en-US)**
+ 
 <p align="center">
- <img src="">
+ <img src="https://user-images.githubusercontent.com/45159366/120383768-21c2b680-c2da-11eb-8657-92f35f77959b.png">
   <br />
 </p>
 
