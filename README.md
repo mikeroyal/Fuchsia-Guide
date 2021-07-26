@@ -8,6 +8,11 @@
 
 **Note: You can easily convert this markdown file to a PDF in [VSCode](https://code.visualstudio.com/) using this handy extension [Markdown PDF](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf).**
 
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/120383768-21c2b680-c2da-11eb-8657-92f35f77959b.png">
+  <br />
+</p>
+
  # Table of Contents
  
  1. [Fuchsia Learning Resources](https://github.com/mikeroyal/Fuchsia-Guide#fuchsia-learning-resources)
@@ -25,6 +30,8 @@
  7. [Go Development](https://github.com/mikeroyal/Fuchsia-Guide#go-development)
  
  8. [Python Development](https://github.com/mikeroyal/Fuchsia-Guide#python-development)
+
+ 9. [Wayland Development](https://github.com/mikeroyal/Fuchsia-Guide#wayland-development)
  
  
  <p align="center">
@@ -33,11 +40,7 @@
 </p>
 
 **Fuchsia OS on the Nest Hub . Source: [Google](https://store.google.com/product/nest_hub_2nd_gen?hl=en-US)**
- 
-<p align="center">
- <img src="https://user-images.githubusercontent.com/45159366/120383768-21c2b680-c2da-11eb-8657-92f35f77959b.png">
-  <br />
-</p>
+
 
  
 # Fuchsia Learning Resources
@@ -67,6 +70,12 @@
 # Fuchsia Tools and Frameworks
 [Back to the Top](https://github.com/mikeroyal/Fuchsia-Guide#table-of-contents)
 
+[Fuchsia Filesystem Architecture](https://fuchsia.dev/fuchsia-src/concepts/filesystems/filesystems)
+
+[Fuchsia emulator (FEMU)](https://fuchsia.dev/fuchsia-src/concepts/emulator) is the default emulator for Fuchsia. FEMU allows you to test Fuchsia components and applications without a physical Fuchsia device.
+
+[Fuchsia Interface Definition Language (FIDL)](https://fuchsia.dev/fuchsia-src/concepts/fidl/overview) is the language used to describe interprocess communication (IPC) protocols used by programs running on Fuchsia.
+
 [Fuchsia System Interface](https://fuchsia.dev/fuchsia-src/concepts/system/abi/system) is the binary interface that the Fuchsia operating system presents to software it runs. The foundation of the interface is the vDSO, which provides access to the system calls. Programs are not allowed to issue system calls directly (e.g., by trapping into the kernel). Instead, programs use the vDSO to interface with the kernel. The bulk of the system interface is provided through inter-process communication protocols, typically defined using FIDL. These protocols are spoken over various kernel primitives, including channels and sockets.
 
 [Fuchsia Integrator Development Kit (IDK)](https://fuchsia.dev/docs/development/idk/gn) is a Developer Kit that contains a small set of libraries and tools required to start building and running programs that target Fuchsia.
@@ -75,13 +84,16 @@
 
 [ffx](https://fuchsia.dev/fuchsia-src/development/tools/ffx/overview) is a tool that provides a unified platform for Fuchsia CLI tools for host target interactions. It introduces a service oriented interface to many common development and integration workflow operations that users may wish to perform against one or more Fuchsia target devices.
 
-[FIDL (Fuchsia Interface Definition Language)](https://fuchsia.dev/fuchsia-src/development/languages/fidl) is the IPC system for Fuchsia.
+[Escher](https://fuchsia.dev/fuchsia-src/concepts/graphics/escher) is a physically based renderer. It is a C++/Vulkan library that is used primarily by the Scenic implementation; it is not exposed by the Fuchsia SDK.
+
+[Magma](https://fuchsia.dev/fuchsia-src/concepts/graphics/magma) is the gpu driver architecture for Fuchsia. There are two driver components: a gpu-specific library loaded into each application’s address space; and the magma system driver that manages the hardware.
+
+[Sysmem](https://fuchsia.dev/fuchsia-src/concepts/graphics/sysmem/sysmem) is a FIDL service that allocates shared memory for use by multiple applications and hardware blocks. This document gives an overview of its major features and what it provides to the system.
 
 [GN](https://gn.googlesource.com/gn/) is a meta-build system that generates build files for [Ninja](https://ninja-build.org/). GN is currently used as the build system for Chromium, Fuchsia, and related projects. 
 
-[GN C++ Frontend SDK] is development kit that currently only supports Linux hosts and the [GN build system](https://fuchsia.dev/fuchsia-src/development/idk/gn).
+[GN C++ Frontend SDK](https://fuchsia.dev/fuchsia-src/development/idk/gn) is development kit that currently only supports Linux hosts and the [GN build system](https://gn.googlesource.com/gn/).
 
-**More will be added to Fuchsia Tools and Frameworks section later on**
 
 # Flutter Development
 
@@ -644,6 +656,92 @@
 
 [Scikit-Learn](https://scikit-learn.org/stable/index.html) is a simple and efficient tool for data mining and data analysis. It is built on NumPy,SciPy, and mathplotlib.
 
+#  Wayland Development
+[Back to the Top](https://github.com/mikeroyal/Fuchsia-Guide#table-of-contents)
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/104235197-79cf4e00-5409-11eb-97a6-a12f7bd8ad2a.png">
+  <br />
+
+</p>
+ 
+## Wayland Learning Resources
+
+[Wayland](https://wayland.freedesktop.org) is a protocol for a compositor to talk to its clients as well as a C library implementation of that protocol. The compositor can be a standalone display server running on Linux kernel modesetting and evdev input devices, an [X application](https://www.x.org/wiki/XServer/), or a wayland client itself.
+
+[Wayland Architecture](https://wayland.freedesktop.org/architecture.html)
+
+[Wayland Documentation](https://wayland.freedesktop.org/docs/html/)
+
+[Sotfware Toolkits that have Wayland support right now](https://wayland.freedesktop.org/toolkits.html)
+
+[Contribution instructions for Wayland](https://gitlab.freedesktop.org/wayland/wayland/blob/master/CONTRIBUTING.md)
+
+[Contribution instructions for Weston](https://gitlab.freedesktop.org/wayland/weston/blob/master/CONTRIBUTING.md)
+
+[Reporting Wayland bugs](https://gitlab.freedesktop.org/wayland/wayland/issues)
+
+[Reporting Weston bugs](https://gitlab.freedesktop.org/wayland/weston/issues)
+
+[WSLG: X11 and Wayland Applications in Windows Subsystem for Linux(WSL2)](https://linuxplumbersconf.org/event/9/contributions/611/attachments/702/1298/XDC2020_-_X11_and_Wayland_applications_in_WSL.pdf)
+
+[Qt Wayland Compositor](https://doc.qt.io/qt-5/qtwaylandcompositor-index.html)
+
+[Qt Wayland Compositor Examples](https://doc.qt.io/qt-5/qtwaylandcompositor-examples.html)
+
+[Wayland on ArchWiki](https://wiki.archlinux.org/index.php/Wayland)
+
+[Sway on ArchWiki](https://wiki.archlinux.org/index.php/Sway)
+
+[Wayland on Ubuntu Wiki](https://wiki.ubuntu.com/Wayland)
+
+[Wayland on Debian Wiki](https://wiki.debian.org/Wayland)
+
+[The Wayland Display Server on Fedora Docs](https://docs.fedoraproject.org/en-US/fedora/rawhide/system-administrators-guide/Wayland/)
+
+[Wayland features on Fedora Project Wiki](https://fedoraproject.org/wiki/Wayland_features)
+
+[Wayland on GNOME Wiki](https://wiki.gnome.org/Initiatives/Wayland)
+
+[KWin/Wayland on KDE Community Wiki](https://community.kde.org/index.php?title=KWin/Wayland)
+
+[Wayland Desktop Landscape on Gentoo Wiki](https://wiki.gentoo.org/wiki/Wayland_Desktop_Landscape)
+
+[Wayland in Void Linux Handbook](https://docs.voidlinux.org/config/graphical-session/wayland.html)
+
+[Wayland on Enlightenment DE](https://www.enlightenment.org/about-wayland)
+
+## Wayland Tools
+
+[Weston](https://gitlab.freedesktop.org/wayland/weston) is a lightweight and functional Wayland compositor.
+
+[XWayland](https://wayland.freedesktop.org/xserver.html) is an X Server running as a Wayland client(for backwards compatibility), allowing the [Xorg server](https://www.x.org/wiki/XServer/) can be modified to use wayland input devices for input and forward either the root window or individual top-level windows as wayland surfaces.
+
+[KWayland](https://github.com/KDE/kwayland-server) is a Qt-style API to interact with the wayland-client and wayland-server API.
+
+[Qt](https://www.qt.io/) is the faster, smarter way to create innovative devices, modern UIs & applications for multiple screens. It is one of the most popular toolkits for the Wayland and X11 windowing.
+
+[GTK](https://www.gtk.org/) is a free and open source cross-platform widget toolkit for creating graphical user interfaces developed by [GNOME Project](https://www.gnome.org/). It is one of the most popular toolkits for the Wayland and X11 windowing.
+
+[NVIDIA Wayland EGL External Platform library](https://github.com/NVIDIA/egl-wayland) is a work-in-progress implementation of a EGL External Platform library to add client-side Wayland support to EGL on top of EGLDevice and EGLStream families of extensions.
+
+[NVIDIA EGL External Platform Interface](https://github.com/NVIDIA/eglexternalplatform) is a work-in-progress specification of the EGL External Platform interface for writing EGL platforms and their interactions with modern window systems on top of existing low-level EGL platform implementations. This keeps window system implementation specifics out of EGL drivers by using application-facing EGL functions.
+
+[Sway](https://swaywm.org/) is an [i3](https://i3wm.org/)-compatible Wayland compositor. 
+
+[wlroots](https://github.com/swaywm/wlroots) is a modular Wayland compositor library.
+
+[WayfireWM](https://github.com/WayfireWM/wayfire) is a 3D Wayland compositor, inspired by [Compiz](https://launchpad.net/compiz) and based on [wlroots](https://github.com/swaywm/wlroots).
+
+[SDDM](https://github.com/sddm/sddm) is a modern display manager for X11 and Wayland aiming to be fast, simple and beautiful. It uses modern technologies like QtQuick, which in turn gives the designer the ability to create smooth, animated user interfaces.
+
+[x11docker](https://github.com/mviereck/x11docker) is an application that you allows to run graphical desktop applications (and entire desktops) in Docker Linux containers.
+
+[Mako](https://github.com/emersion/mako) is alightweight notification daemon for Wayland. It also works on [Sway](https://swaywm.org/).
+
+[Wayland-rs](https://github.com/Smithay/wayland-rs) is a Rust implementation of the wayland protocol (client and server).
+
+[Wine-wayland](https://github.com/varmd/wine-wayland) is an application that allows you to running DX9/DX11 and Vulkan games using pure Wayland and Wine/DXVK.
 
 ## Contribute
 
